@@ -1,0 +1,72 @@
+/* reset */
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
+
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box-svg {
+      width: 100vw;
+      height: 50vh;
+      display: flex;
+  }
+
+  svg {
+    width: 25%;
+    color: red;
+    fill: red;
+  }
+
+  @keyframes svgAnim {
+    0% {
+        transform: translateX(50%);
+        
+    }
+    100% {
+        transform: translateX(250%);
+    }
+}
+
+  @keyframes svgMorph {
+    100% {
+      fill: #1da1f2;
+      d: path("m 633.9,812.041 c 112.46,0 173.96,-93.168 173.96,-173.96 0,-2.646 -0.054,-5.28 -0.173,-7.903 11.938,-8.63 22.314,-19.4 30.498,-31.66 -10.955,4.87 -140.455,30.987 -152.822,32.465 12.623,-7.569 140.025,-42.382 144.597,-56.656 -11.813,7.003 -24.895,12.093 -38.824,14.841 -11.157,-11.884 -27.041,-19.317 -44.629,-19.317 -33.764,0 -61.144,27.381 -61.144,61.132 0,4.798 117.40133,42.18601 118.45033,46.66301 C 752.99833,675.08901 591.075,618.038 560.919,581.044 c -5.251,9.035 -8.279,19.531 -8.279,30.73 0,21.212 10.794,39.938 27.208,50.893 -10.031,-0.31 -19.454,-3.064 -27.69,-7.647 -0.009,0.257 -0.009,0.507 -0.009,0.781 0,29.61 21.075,54.332 49.051,59.934 -5.137,1.4 -10.543,2.151 -16.122,2.151 -3.933,0 -7.766,-0.387 -11.491,-1.102 7.784,24.293 30.355,41.971 57.115,42.465 -20.926,16.402 -47.287,26.171 -75.937,26.171 -4.929,0 -9.798,-0.281 -14.584,-0.847 27.059,17.344 59.189,27.464 93.722,27.464");
+    }
+  }
+
+  svg {
+    animation: svgAnim 2s ease-in-out infinite;
+  }
+
+  svg path {
+    animation: svgMorph 2s ease-in-out infinite;
+  }
+
+  @keyframes appear {
+    0% {
+      opacity: 0;   
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+h2 {
+  animation:  appear 15s ease-in-out;
+}
